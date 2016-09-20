@@ -101,3 +101,155 @@ body.dark {
 .button:active {
 	background-color: hsl(199, 100%, 42%);
 }
+
+/*ticket*/
+.tickets {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+}
+.ticket {
+	display: block;
+	width: 302px;
+	-webkit-animation: ticketIn 1s;
+  	animation: ticketIn 1s;
+  	margin-bottom: 10px;
+}
+.ticket.show {
+	-webkit-animation: ticketIn 1s;
+  	animation: ticketIn 1s;
+    opacity: 1;
+}
+.ticket .ticket--inner {
+	display: flex;
+}
+.ticket .ticket--inner .ticket--left-part {
+	flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    color: #795548;
+    font-size: 22px;
+    min-height: 101px;
+}
+.ticket .ticket--inner .ticket--left-part,
+.ticket .ticket--inner .ticket--right-part {
+    background:
+		 -webkit-linear-gradient(0deg, #FFE1B3, #FFE1B3),
+		 -webkit-linear-gradient(90deg, #FFE1B3, #FFE1B3),
+         -webkit-radial-gradient(0 100%, circle, rgba(0,0,0,0) 7px, #FFE1B3 8px),
+         -webkit-radial-gradient(100% 100%, circle, rgba(0,0,0,0) 7px, #FFE1B3 8px),
+         -webkit-radial-gradient(100% 0, circle, rgba(0,0,0,0) 7px, #FFE1B3 8px),
+         -webkit-radial-gradient(0 0, circle, rgba(0,0,0,0) 7px, #FFE1B3 8px);
+
+    background-position: center left, center top, bottom left, bottom right, top right, top left;
+    -moz-background-size: 100% 10px, 10px 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+    -webkit-background-size: 100% 10px, 10px 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+    background-size: 100% 10px, 10px 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+
+    background-repeat: no-repeat;
+}
+.dark .ticket .ticket--inner .ticket--left-part,
+.dark .ticket .ticket--inner .ticket--right-part {
+    background:
+		 -webkit-linear-gradient(0deg, lightgray, lightgray),
+		 -webkit-linear-gradient(90deg, lightgray, lightgray),
+         -webkit-radial-gradient(0 100%, circle, rgba(0,0,0,0) 7px, lightgray 8px),
+         -webkit-radial-gradient(100% 100%, circle, rgba(0,0,0,0) 7px, lightgray 8px),
+         -webkit-radial-gradient(100% 0, circle, rgba(0,0,0,0) 7px, lightgray 8px),
+         -webkit-radial-gradient(0 0, circle, rgba(0,0,0,0) 7px, lightgray 8px);
+
+    background-position: center left, center top, bottom left, bottom right, top right, top left;
+    -moz-background-size: 100% 10px, 10px 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+    -webkit-background-size: 100% 10px, 10px 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+    background-size: 100% 10px, 10px 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+
+    background-repeat: no-repeat;
+}
+.ticket .ticket--inner .ticket--right-part {
+	flex-shrink: 0;
+	flex-grow: 2;
+	flex-basis: 200px;
+	text-align: center;
+	padding: 8px 0
+}
+.ticket .ticket--inner .ticket--right-part .ticket--right-part--inner {
+    height: 100%;
+    border-left: 1px dashed white;
+    padding: 0px 15px;
+}
+.dark .ticket .ticket--inner .ticket--right-part .ticket--right-part--inner {
+	border-left: 1px dashed black;
+}
+.ticket .ticket--inner .ticket--right-part .ticket--right-part--inner .content {
+	color: #4C4C55;
+	font-size: 11px;
+    margin-bottom: 5px;
+}
+.ticket .ticket--inner .ticket--right-part .ticket--right-part--inner h1 {
+	color: #000;
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 0px;
+    padding-top: 5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+@-webkit-keyframes ticketIn {
+	0% {
+		-webkit-transform: translate3d(0, -1000px, 0);
+		transform: translate3d(0, -100px, 0);
+	}
+
+	60% {
+		-webkit-transform: translate3d(0, 20px, 0);
+		transform: translate3d(0, 20px, 0);
+	}
+
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes ticketIn {
+	0% {
+		-webkit-transform: translate3d(0, -1000px, 0);
+		transform: translate3d(0, -1000px, 0);
+	}
+
+	60% {
+		-webkit-transform: translate3d(0, 20px, 0);
+		transform: translate3d(0, 20px, 0);
+	}
+
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}

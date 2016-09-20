@@ -4,5 +4,9 @@ $(function(){
 		$('#lightSwitch').on('click',$.proxy(function(){
 			this.body.toggleClass('dark');
 		},this));
+
+		$('#MessageInput + button').on('click', () => {
+			messageModule.showMessage($('#MessageInput').val());
+		});
 	}();
 });
