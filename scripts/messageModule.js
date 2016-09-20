@@ -1,8 +1,5 @@
 var messageModule = (function() {
   	const templateId = '#ticketTemplate';
-  	const tWhere = (i, n) => {
-  		return $(i).css("display") !== "none";
-  	};
 
   	function showMessage(text) { 
   		text = text || "The path of the righteous man is beset on all sides by iniquities of the selfish and the tyranny of evil men.";
